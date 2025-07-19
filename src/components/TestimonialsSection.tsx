@@ -34,20 +34,20 @@ export const TestimonialsSection: React.FC = () => {
           {/* Navigation arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#54f4fc]/20 hover:bg-[#54f4fc]/40 rounded-full flex items-center justify-center transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[var(--primary-accent)]/20 hover:bg-[var(--primary-accent)]/40 rounded-full flex items-center justify-center transition-colors"
             aria-label="Previous testimonial"
           >
-            <svg className="w-6 h-6 text-[#54f4fc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-[var(--primary-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#54f4fc]/20 hover:bg-[#54f4fc]/40 rounded-full flex items-center justify-center transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[var(--primary-accent)]/20 hover:bg-[var(--primary-accent)]/40 rounded-full flex items-center justify-center transition-colors"
             aria-label="Next testimonial"
           >
-            <svg className="w-6 h-6 text-[#54f4fc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-[var(--primary-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -56,7 +56,7 @@ export const TestimonialsSection: React.FC = () => {
           <div className="px-16">
             <AvatarRoot className="w-32 h-32 lg:w-40 lg:h-40 mx-auto mb-8">
               <AvatarImage src={TESTIMONIALS[currentTestimonial].avatar} alt={TESTIMONIALS[currentTestimonial].name} />
-              <AvatarFallback className="bg-[#54f4fc] text-black">
+              <AvatarFallback className="bg-[var(--primary-accent)] text-black">
                 {TESTIMONIALS[currentTestimonial].name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </AvatarRoot>
@@ -82,7 +82,7 @@ export const TestimonialsSection: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-4 h-4 rounded-full transition-colors ${
-                  index === currentTestimonial ? "bg-[#54f4fc]" : "bg-[#54f4fc]/30"
+                  index === currentTestimonial ? "bg-[var(--primary-accent)]" : "bg-[var(--primary-accent)]/30"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

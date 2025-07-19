@@ -16,26 +16,38 @@ export const SERVICES = [
   {
     icon: "/Penetration.png",
     title: "Penetration Testing",
+    desc: "Simulate attacks to identify vulnerabilities before hackers do.",
+    href: "/services/penetration-testing"
   },
   {
     icon: "/BugBounty.png",
     title: "Bug Bounty Program Management",
+    desc: "Manage and reward ethical hackers for finding security flaws.",
+    href: "/services/bug-bounty"
   },
   {
     icon: "/ThreatTesting.png",
     title: "Threat Hunting & Intelligence",
+    desc: "Proactively search for threats and gather actionable intelligence.",
+    href: "/services/threat-hunting"
   },
   {
     icon: "/Malware.png",
     title: "Malware Analysis & Reverse Engineering",
+    desc: "Analyze and neutralize malicious software targeting your systems.",
+    href: "/services/malware-analysis"
   },
   {
     icon: "/DigitalForensic.png",
     title: "Digital Forensics & Incident Response",
+    desc: "Investigate breaches and respond to security incidents effectively.",
+    href: "/services/digital-forensics"
   },
   {
     icon: "/darkWeb.png",
     title: "Dark Web Monitoring & Forensics",
+    desc: "Monitor and analyze dark web activity for potential threats.",
+    href: "/services/dark-web-monitoring"
   },
 ];
 

@@ -19,36 +19,37 @@ const ServicesSection: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {SERVICES.slice(0, visibleCount).map((service, index) => (
-            <Card
-              key={index}
-              className="bg-transparent rounded-2xl hover:bg-white/5 transition-colors duration-300 p-[2px]"
-              style={{
-                background: 'linear-gradient(90deg, #55F4FC, #186EB4)'
-              }}
-            >
-              <div className="bg-black rounded-2xl h-full w-full min-h-[220px] flex items-center justify-center">
-                <CardContent className="flex flex-col items-center gap-3 px-8 py-8 w-full">
-                  <Image
-                    className="w-16 h-16 mb-4"
-                    alt={`${service.title} icon`}
-                    src={service.icon}
-                    width={64}
-                    height={64}
-                    draggable={false}
-                  />
-                  <div className="text-center">
-                    <h3 className="font-['Montserrat',Helvetica] font-semibold text-2xl lg:text-3xl leading-tight bg-gradient-to-r from-[#55F4FC] to-[#186EB4] bg-clip-text text-transparent">
-                      {service.title}
-                    </h3>
-                  </div>
-                </CardContent>
-              </div>
-            </Card>
+            <a href={service.href} key={index} className="block">
+              <Card
+                className="bg-transparent rounded-2xl hover:bg-white/5 transition-colors duration-300 p-[2px] cursor-pointer"
+                style={{
+                  background: 'linear-gradient(90deg, var(--primary-accent), #186EB4)'
+                }}
+              >
+                <div className="bg-black rounded-2xl h-full w-full min-h-[220px] flex items-center justify-center">
+                  <CardContent className="flex flex-col items-center gap-3 px-8 py-8 w-full">
+                    <Image
+                      className="w-16 h-16 mb-4"
+                      alt={`${service.title} icon`}
+                      src={service.icon}
+                      width={64}
+                      height={64}
+                      draggable={false}
+                    />
+                    <div className="text-center">
+                      <h3 className="font-['Montserrat',Helvetica] font-semibold text-2xl lg:text-3xl leading-tight bg-gradient-to-r from-[var(--primary-accent)] to-[#186EB4] bg-clip-text text-transparent">
+                        {service.title}
+                      </h3>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </a>
           ))}
         </div>
         {visibleCount < SERVICES.length && (
           <div className="flex justify-center mt-12 lg:mt-[72px]">
-            <Button onClick={handleLoadMore} className="bg-[#54f4fc] text-black rounded-lg px-6 lg:px-[30px] py-3 lg:py-[17px] font-['Montserrat',Helvetica] font-bold text-sm lg:text-base tracking-[0.80px] leading-[26.2px] flex items-center gap-2 hover:bg-[#54f4fc]/90 transition-colors">
+            <Button onClick={handleLoadMore} className="bg-[var(--primary-accent)] text-black rounded-lg px-6 lg:px-[30px] py-3 lg:py-[17px] font-['Montserrat',Helvetica] font-bold text-sm lg:text-base tracking-[0.80px] leading-[26.2px] flex items-center gap-2 hover:bg-[var(--primary-accent)]/90 transition-colors">
               Load More
               <div className="w-[22.79px] h-[13.83px] bg-[url(/vector.svg)] bg-[100%_100%]" />
             </Button>
