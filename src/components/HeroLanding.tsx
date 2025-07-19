@@ -2,6 +2,26 @@ import Image from 'next/image';
 
 const HeroLanding = () => (
   <section className="relative w-full min-h-screen bg-black flex items-center overflow-hidden">
+    {/* Vertical Line for Hero Text */}
+    <div className="hidden md:block absolute" style={{ left: 47, top: '48.5%', transform: 'translateY(-60%)', width: '2px', height: '235px', background: '#424242', borderRadius: '1px', zIndex: 10 }} />
+    {/* Top Horizontal Line */}
+    <div className="hidden md:block absolute" style={{
+      left: 47,
+      top: 'calc(50% - 150px)', 
+      width: '30px',
+      height: '2px',
+      background: '#424242',
+      zIndex: 10
+    }} />
+    {/* Bottom Horizontal Line */}
+    <div className="hidden md:block absolute" style={{
+      left: 47,
+      top: 'calc(50% + 85px)', 
+      width: '30px',
+      height: '2px',
+      background: '#424242',
+      zIndex: 10
+    }} />
     {/* Background Lock Image */}
     <div className="hidden md:block absolute top-0 right-0 h-full w-[50vw] z-0 pointer-events-none flex justify-end" style={{ right: '30px' }}>
       <div className="relative h-full w-full">
