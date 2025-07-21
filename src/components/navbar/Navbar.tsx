@@ -41,7 +41,7 @@ const Navbar = () => {
               Services <span className="ml-[2px] relative top-[1px] text-sm">▾</span>
             </button>
             {servicesOpen && (
-              <ul className="absolute bg-[var(--background)]/95 text-white mt-2 rounded shadow-lg p-2 min-w-[180px] z-20 border border-[var(--footer-line)]">
+              <ul className="absolute bg-[var(--background)]/95 text-white mt-2 rounded shadow-lg p-2 min-w-[280px] z-20 border border-[var(--footer-line)]">
                 {SERVICES.map((service, idx) => (
                   <li key={service.title} className="px-4 py-2 hover:bg-[var(--footer-line)]/40 cursor-pointer flex items-center gap-2 transition-colors">
                     <a href={service.href} className="flex items-center gap-2 w-full">
@@ -59,7 +59,10 @@ const Navbar = () => {
           <li><a href="#" className="font-[Montserrat] font-normal text-[14px] leading-[164%] tracking-wider" style={{ width: 95, height: 26, letterSpacing: '5%' }}>Reports</a></li>
         </ul>
         {/* Sign Up */}
-        <div className="hidden md:block text-[var(--navbar-accent)] font-[Montserrat] font-semibold text-[16px] leading-[164%] tracking-wider cursor-pointer whitespace-nowrap mt-[12px]">SIGN UP</div>
+        <div className="hidden md:flex items-center gap-8">
+            <a href="/editor" className="font-[Montserrat] font-normal text-[14px] leading-[164%] tracking-wider" style={{ letterSpacing: '5%' }}>Editor</a>
+            <div className="text-[var(--navbar-accent)] font-[Montserrat] font-semibold text-[16px] leading-[164%] tracking-wider cursor-pointer whitespace-nowrap transition-transform duration-200 transform hover:scale-105">SIGN UP</div>
+        </div>
       </div>
       {/* Mobile Dropdown */}
       {mobileMenuOpen && (

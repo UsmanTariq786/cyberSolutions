@@ -49,8 +49,8 @@ const HeroLanding = () => (
         Unlock your business's full potential with our comprehensive cybersecurity strategies. Safeguard your growth and resilience in the digital age.
       </p>
       <div className="flex gap-4 flex-wrap">
-        <button className="bg-cyan-400 text-black font-[Montserrat] font-semibold px-6 py-3 rounded hover:bg-cyan-300 transition">LEARN MORE</button>
-        <button className="border border-cyan-400 text-cyan-400 font-[Montserrat] px-6 py-3 rounded hover:bg-cyan-600 hover:text-white transition">TALK WITH US</button>
+        <button className="bg-cyan-400 text-black font-[Montserrat] font-semibold px-6 py-3 rounded hover:bg-cyan-300 transition-all duration-200 transform hover:scale-105">LEARN MORE</button>
+        <button className="border border-cyan-400 text-cyan-400 font-[Montserrat] px-6 py-3 rounded hover:bg-cyan-600 hover:text-white transition-all duration-200 transform hover:scale-105">TALK WITH US</button>
       </div>
     </div>
   </section>

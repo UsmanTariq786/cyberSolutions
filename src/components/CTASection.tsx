@@ -18,10 +18,10 @@ export const CTASection: React.FC = () => {
             Having difficulties choosing the right solution for your business?
           </p>
           <div className="flex flex-row gap-3">
-            <button className="bg-cyan-400 text-black font-['Montserrat',Helvetica] font-semibold px-6 py-2 rounded hover:bg-cyan-300 transition text-xs md:text-sm">
+            <button className="bg-cyan-400 text-black font-['Montserrat',Helvetica] font-semibold px-6 py-2 rounded hover:bg-cyan-300 transition-all duration-200 transform hover:scale-105 text-xs md:text-sm">
               BOOK AN APPOINTMENT
             </button>
-            <button className="border border-cyan-400 text-cyan-400 font-['Montserrat',Helvetica] px-6 py-2 rounded hover:bg-cyan-600 hover:text-white transition text-xs md:text-sm">
+            <button className="border border-cyan-400 text-cyan-400 font-['Montserrat',Helvetica] px-6 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all duration-200 transform hover:scale-105 text-xs md:text-sm">
               TALK WITH US
             </button>
           </div>
